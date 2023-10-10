@@ -11,4 +11,4 @@ Because I need to practice my programming skill, leetcode is perhaps the most ef
 
 ## Language and why?
 
-C++. Because Python can get away without knowing some big important stuff e.g. pointers, memory allocation etc. and Java has JVM which is also too powerful which allows some level of skipping.    
+C++. Because Python can get away without knowing some big important stuff e.g. pointers, memory allocation etc. and Java has JVM which in my opnion it's too powerful and allows some level of skipping.    
