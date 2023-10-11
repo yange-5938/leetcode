@@ -16,17 +16,17 @@ public:
         bool start = false;
         int count = 0;
         for (std::string::reverse_iterator rit=s.rbegin(); rit!=s.rend(); ++rit){
-            if ((*rit == ' ') && (start == false)){
-                continue;
-            } else if((*rit == ' ' ) && (start == true)){
-                break;
+            if (*rit == ' '){
+                if (start){
+                    break;
+                } else {
+                    continue;
+                }
             } else {
                 start = true;
                 count++;
             }
-
         }
         return count;
-
     } 
 };
