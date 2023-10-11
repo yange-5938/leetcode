@@ -15,22 +15,101 @@
     class Solution {
     public:
         bool isValid(string s) {
-            const char *c = s.c_str();
+
+            try{
+                consume_token(s.c_str());
+            } catch (...){
+                return false;
+            }
             return true;
+        }
+        // backtracking implementation, couldn't submit because too many inkarnations which leads to heap-buffer-overflow. Perhaps make it to tail-recursion, but maybe later.
+
+        void consume_token(const char* c){
+            while(*(c) != '\0'){
+                switch (*c){
+                    case '(':  
+                    c = parse_s(c+1);              
+                    break;
+                    case '[':
+                    c = parse_m(c+1);
+                    break;
+                    case '{':
+                    c = parse_l(c+1);
+                    break;
+                    case '/0':
+                    goto exit;
+
+                    default:
+                    throw "wrong";
+                }
+            }
+            exit:
+                return;
         }
 
-        bool consume_token(string* s){
-            cout<<*(s);
-            return true;
-            // switch (*s)[0]{
-            //     case "(":
-            //     cout<<"yes";
-            // }
-            
-            return true;
+        const char* parse_s(const char* c){            
+            while(*(c) != '\0'){
+                switch (*c){
+                    case '(':
+                    c = parse_s(c+1);
+                    break;
+                    case '[':
+                    c = parse_m(c+1);
+                    break;
+                    case '{':
+                    c = parse_l(c+1);
+                    break;
+                    case ')':
+                    goto exit;
+                    default:
+                    throw "wrong";
+                }
+            }
+            exit:
+                return (c+1);
+        }
+        const char* parse_m(const char* c){            
+            while(*(c) != '\0'){
+                switch (*c){
+                    case '(':
+                    c = parse_s(c+1);
+                    break;
+                    case '[':
+                    c = parse_m(c+1);
+                    break;
+                    case '{':
+                    c = parse_l(c+1);
+                    break;
+                    case ']':
+                    goto exit;
+                    default:
+                    throw "wrong";
+                }
+            }
+            exit:
+                return (c+1);
+        }
+        const char* parse_l(const char* c){            
+            while(*(c) != '\0'){
+                switch (*c){
+                    case '(':
+                    c = parse_s(c+1);
+                    break;
+                    case '[':
+                    c = parse_m(c+1);
+                    break;
+                    case '{':
+                    c = parse_l(c+1);
+                    break;
+                    case '}':
+                    goto exit;
+                    default:
+                    throw "wrong";
+                }
+            }
+            exit:
+                return (c+1);
         }
 
-        bool consume_s(char s){
-            return true;
-        }
     };
