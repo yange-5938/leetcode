@@ -35,7 +35,7 @@ class Solution {
 public:
     int removeElement(vector<int>& nums, int val) {
     for (auto i = nums.begin(); i != nums.end(); ){
-        *i == val ? i = nums.erase(i) : ++i;
+        i = *i == val ? nums.erase(i) : ++i;
     }
     
     return nums.size();
