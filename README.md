@@ -10,4 +10,4 @@ Because I need to practice my programming skill, leetcode is perhaps the most ef
 
 ## Language and why?
 
-C++. Because Python and Java can get away without knowing some important stuff e.g. pointers, memory allocation etc.
+C++ and Python. Doing C++ to get to know more about pointers, memory allocation etc.
