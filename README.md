@@ -17,5 +17,8 @@ Get better at coding, prepare for interviews.
 ~~10.2023~~
 ~~C++, doing C++ to get to know more about pointers, memory management, metaprogramming etc.~~
 
+~~12.2023~~
+~~C++ and Python, learn two languages at once, as both are highly demanded languages in different domains.~~
+
 02.2024
-Python, fastest to Write&Read, made for interviews.
+Python, fastest to write, most concise to read, made for interviews.
