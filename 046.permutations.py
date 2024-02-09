@@ -7,19 +7,14 @@
 # @lc code=start
 class Solution:
     def permute(self, nums: List[int]) -> List[List[int]]:
-        def backtrack(path, used):
-            if len(path) == len(nums):
+        def backtrack(path, col):
+            if not col:
                 result.append(path[:])
                 return
-            for i in range(len(nums)):
-                if not used[i]:
-                    path.append(nums[i])
-                    used[i] = True
-                    backtrack(path,used)
-                    path.pop()
-                    used[i] = False
+            for i in range(len(col)):
+                backtrack(path + [col[i]],col[:i]+ col[i+1:])
         result = []
-        backtrack([],[False]*len(nums))
+        backtrack([], nums)
         return result
     
 # @lc code=end
