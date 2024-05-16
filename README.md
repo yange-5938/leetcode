@@ -31,5 +31,5 @@ Python, fastest to write, most concise to read, made for interviews.
 ## Thoughts
 
 05.2024
-+ I think it make more sense have questions solved in same categroy rather than scatter them in different categories.
++ I think it makes more sense to have questions solved in same categroy rather than scatter them in different categories.
 + Rather than "thinking by myself", I will directly look into the solutions and replicate the solution. It's more efficient for me to learn from bursting the question quantity
