@@ -12,6 +12,7 @@ My leetcode profile: [leetcode.com/Yange_9234/](https://leetcode.com/Yange_9234/
 02.2024
 Get better at coding, prepare for interviews.
 
+
 ## Language and why?
 
 ~~10.2023~~
@@ -22,3 +23,10 @@ Get better at coding, prepare for interviews.
 
 02.2024
 Python, fastest to write, most concise to read, made for interviews.
+
+## Thoughts
+
+05.2024
++ I don't get enough code implementation anywhere else, in work I my tasks is to use this framework, or fix this little bit. Leetcode could be only place I have to implement some small coding problem.
++ I think it make more sense have a quantity of questions solved in same categroy rather than scatter them in different categories.
++ Rather than "thinking by myself", I will directly look into the solutions and replicate the solution. It's more efficient for me to learn from bursting the question quantity
