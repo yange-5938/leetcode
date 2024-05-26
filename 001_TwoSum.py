@@ -10,16 +10,13 @@
 // Output: [0,1]
 // Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
 
-class Solution {
-public:
-    vector<int> twoSum(vector<int>& nums, int target) {
-        vector<int> ans;
-        for (size_t i = 0; i < nums.size();++i){
-            for (size_t j = i+1; j < nums.size();++j){
-                if (nums[i] + nums[j] == target)
-                    ans = {static_cast<int>(i),static_cast<int>(j)};
-                }
-            }
-        return ans;
-        }
-    };
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        num_to_index = {}
+
+        for i, num in enumerate(nums):
+            comp = target - num
+            if comp in num_to_index:
+                return [num_to_index[comp],i]
+            else:
+                num_to_index[num] = i
